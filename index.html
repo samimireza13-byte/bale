@@ -11,13 +11,7 @@
     <canvas id="unity-canvas" width=320 height=600 tabindex="-1" style="width: 320px; height: 600px; background: #231F20"></canvas>
     <script src="Build/WebBuild.loader.js"></script>
     <script>
-      // ----------------------------------------------------
-      // سرکوب و جلوگیری از نمایش خطاهای جاوااسکریپت و یونیتی
-      window.onerror = function(message, source, lineno, colno, error) {
-        return true; // جلوی نمایش Alert یا Banner خطای مرورگر را می‌گیرد
-      };
-      // ----------------------------------------------------
-
+    
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
         // Mobile device style: fill the whole browser client area with the game canvas:
         var meta = document.createElement('meta');
@@ -43,8 +37,8 @@
         companyName: "DefaultCompany",
         productName: "MiniApp",
         productVersion: "1.0",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+        matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       }).then((unityInstance) => {
       }).catch((message) => {
         // اگر نمی‌خواهید در صورت بروز خطای بحرانی هم Alert داده شود، خط زیر را کامنت کنید:
