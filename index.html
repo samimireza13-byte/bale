@@ -12,9 +12,9 @@
     <script src="Build/WebBuild.loader.js"></script>
     <script>
       // ----------------------------------------------------
-      // سرکوب و جلوگیری از نمایش خطاهای جاوااسکریپت و یونیتی
+      
       window.onerror = function(message, source, lineno, colno, error) {
-        return true; // جلوی نمایش Alert یا Banner خطای مرورگر را می‌گیرد
+        return true; 
       };
       // ----------------------------------------------------
 
@@ -47,7 +47,7 @@
         // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
       }).then((unityInstance) => {
       }).catch((message) => {
-        // اگر نمی‌خواهید در صورت بروز خطای بحرانی هم Alert داده شود، خط زیر را کامنت کنید:
+       
         // alert(message);
       });
     </script>
